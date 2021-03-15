@@ -1,0 +1,82 @@
+/*--------------
+VARIABLES
+--------------*/
+
+:root {
+  --primary-color: #0065fc;
+  --secondary-color: #deebff;
+  --tertiary-color: #f2f2f2;
+}
+
+/*--------------
+GENERAL RULES
+--------------*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*--------------
+HEADER
+--------------*/
+
+header {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+h1 {
+  flex-basis: 60%;
+  padding-left: 5%;
+}
+
+.inscription {
+  color: var(--primary-color);
+  font-weight: bold;
+  padding-right: 5%;
+}
+
+nav {
+  flex-basis: 100%;
+}
+
+.header-nav {
+  display: flex;
+}
+
+.header-nav li {
+  display: flex;
+  flex-basis: 50%;
+}
+
+.nav-link {
+  border-bottom: 3px solid var(--tertiary-color);
+  flex-basis: 100%;
+  padding: 0.75em 0;
+  text-align: center;
+}
+
+.nav-link.active {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
