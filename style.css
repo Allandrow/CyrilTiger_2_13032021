@@ -51,9 +51,12 @@ h1 {
 }
 
 .inscription {
+  padding-right: 5%;
+}
+
+.inscription a {
   color: var(--primary-color);
   font-weight: bold;
-  padding-right: 5%;
 }
 
 nav {
@@ -65,18 +68,21 @@ nav {
 }
 
 .header-nav li {
+  border-bottom: 3px solid var(--tertiary-color);
   display: flex;
   flex-basis: 50%;
 }
 
+.header-nav .active {
+  border-color: var(--primary-color);
+}
+
+.header-nav .active a {
+  color: var(--primary-color);
+}
+
 .nav-link {
-  border-bottom: 3px solid var(--tertiary-color);
   flex-basis: 100%;
   padding: 0.75em 0;
   text-align: center;
-}
-
-.nav-link.active {
-  border-color: var(--primary-color);
-  color: var(--primary-color);
 }
