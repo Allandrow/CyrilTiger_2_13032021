@@ -68,7 +68,7 @@ nav {
 }
 
 .header-nav li {
-  border-bottom: 3px solid var(--tertiary-color);
+  border-bottom: 0.2em solid var(--tertiary-color);
   display: flex;
   flex-basis: 50%;
 }
@@ -85,4 +85,57 @@ nav {
   flex-basis: 100%;
   padding: 0.75em 0;
   text-align: center;
+}
+
+/*--------------
+RECHERCHE ET FILTRES
+--------------*/
+
+.search-filters {
+  padding: 0 5%;
+}
+
+.search-filters h2 {
+  margin-bottom: 0.6em;
+}
+
+.accroche {
+  margin: 0;
+}
+
+form {
+  margin: 1.5em 0;
+  display: flex;
+}
+
+form > * {
+  font-size: 1rem;
+}
+
+label {
+  background-color: var(--tertiary-color);
+  padding: 0.75em 1em;
+  border-radius: 25% 0 0 25%;
+}
+
+input {
+  border-inline: 0;
+  border-block: 1px solid var(--tertiary-color);
+  margin: 0;
+  padding: 0 1em;
+  font-weight: bold;
+  outline-color: var(--secondary-color);
+}
+
+::placeholder {
+  color: #000;
+}
+
+button {
+  color: #fff;
+  background-color: var(--primary-color);
+  border: 0;
+  border-radius: 25%;
+  padding: 0 1em;
+  margin-left: -0.5em;
 }
