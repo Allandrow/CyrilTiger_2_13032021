@@ -23,7 +23,8 @@ body {
   margin: 0;
 }
 
-section {
+section,
+footer {
   padding: 2em 5%;
 }
 
@@ -208,7 +209,7 @@ button {
 }
 
 /*--------------
-HEBERGEMENTS ET POPULAIRES
+SECTIONS POPULAIRES, HEBERGEMENTS, ACTIVITES
 --------------*/
 
 .populaires {
@@ -318,4 +319,25 @@ HEBERGEMENTS ET POPULAIRES
   align-items: center;
   flex-grow: 1;
   padding-left: 1em;
+}
+
+/*--------------
+FOOTER
+--------------*/
+
+footer {
+  background-color: var(--tertiary-color);
+  padding-top: 0;
+}
+
+footer div {
+  padding-top: 2em;
+}
+
+footer h3 {
+  margin-top: 0;
+}
+
+footer li {
+  margin-bottom: 0.5em;
 }
