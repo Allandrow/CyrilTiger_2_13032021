@@ -271,7 +271,7 @@ HEBERGEMENTS ET POPULAIRES
   color: var(--primary-color);
 }
 
-/* SPECIFICITES POPULAIRES */
+/* SPECIFICITES CARDS */
 
 .populaires .card {
   height: 150px;
@@ -287,20 +287,35 @@ HEBERGEMENTS ET POPULAIRES
   padding: 1em 1.5em;
 }
 
-/* SPECIFICITES HEBERGEMENTS */
-
-.hebergements .card {
+:is(.hebergements, .activites) .card {
   flex-direction: column;
   height: 200px;
 }
 
-.hebergements .card-img img {
+:is(.hebergements, .activites) .card-img img {
   width: 100%;
-  height: 110px;
   border-radius: 1em 1em 0 0;
+}
+.hebergements .card-img img {
+  height: 110px;
 }
 
 .hebergements .card-content {
   padding: 5px 0.5em;
   flex-grow: 1;
+}
+
+.activites .card {
+  padding: 0;
+}
+
+.activites .card-img img {
+  height: 150px;
+}
+
+.activites .card-content {
+  flex-direction: row;
+  align-items: center;
+  flex-grow: 1;
+  padding-left: 1em;
 }
