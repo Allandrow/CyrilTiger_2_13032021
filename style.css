@@ -28,6 +28,12 @@ footer {
   padding: 2em 5%;
 }
 
+.container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
 h2 {
   margin: 0;
 }
@@ -86,11 +92,11 @@ nav {
   flex-basis: 50%;
 }
 
-.header-nav .active {
+.header-nav :is(.active, li:hover) {
   border-color: var(--primary-color);
 }
 
-.header-nav .active a {
+.header-nav :is(.active, li:hover) a {
   color: var(--primary-color);
 }
 
@@ -115,8 +121,8 @@ RECHERCHE ET FILTRES
 /* CHAMP DE RECHERCHE */
 
 form {
-  margin: 1.5em 0;
   display: flex;
+  margin: 1.5em 0;
 }
 
 form > * {
@@ -125,17 +131,17 @@ form > * {
 
 label {
   background-color: var(--tertiary-color);
-  padding: 0.75em 1em;
   border-radius: 25% 0 0 25%;
+  padding: 0.75em 1em;
 }
 
 input {
-  border-inline: 0;
   border-block: 1px solid var(--tertiary-color);
-  margin: 0;
-  padding: 0 1em;
+  border-inline: 0;
   font-weight: bold;
+  margin: 0;
   outline-color: var(--secondary-color);
+  padding: 0 1em;
 }
 
 ::placeholder {
@@ -143,12 +149,12 @@ input {
 }
 
 button {
-  color: #fff;
   background-color: var(--primary-color);
   border: 0;
   border-radius: 25%;
-  padding: 0 1em;
+  color: #fff;
   margin-left: -0.5em;
+  padding: 0 1em;
 }
 
 /* FILTRES */
@@ -160,28 +166,35 @@ button {
 }
 
 .filtres li {
-  display: flex;
   align-items: center;
-  position: relative;
+  cursor: pointer;
+  display: flex;
   margin-bottom: 0.8em;
+  position: relative;
 }
 
 .filtres div {
-  padding: 0.8em;
   background-color: var(--secondary-color);
   border-radius: 50%;
-  width: 3em;
-  text-align: center;
-  position: absolute;
   left: -5px;
+  padding: 0.8em;
+  position: absolute;
+  text-align: center;
+  width: 3em;
 }
 
 .filtres span {
   border: 2px solid var(--tertiary-color);
-  font-weight: bold;
   border-radius: 1.5em;
+  font-weight: bold;
   padding-block: calc(0.8em - 2px);
   padding-inline: 3.5em 1em;
+}
+
+.filtres li:hover span {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 :is(.filtres, .information) i {
@@ -189,19 +202,19 @@ button {
 }
 
 .information {
-  display: flex;
   align-items: baseline;
+  display: flex;
   font-size: 12px;
 }
 
 .information div {
+  align-items: center;
   border: 1px solid var(--tertiary-color);
   border-radius: 50%;
-  min-width: 2em;
-  height: 2em;
   display: flex;
-  align-items: center;
+  height: 2em;
   justify-content: center;
+  min-width: 2em;
 }
 
 .information p {
@@ -234,16 +247,10 @@ SECTIONS POPULAIRES, HEBERGEMENTS, ACTIVITES
 .card {
   background-color: #fff;
   border-radius: 1em;
-  padding: 5px;
-  /* height: 150px; */
-  display: flex;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: flex;
   margin-bottom: 1rem;
-}
-
-.card:hover {
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  padding: 5px;
 }
 
 .card-img img {
@@ -279,9 +286,9 @@ SECTIONS POPULAIRES, HEBERGEMENTS, ACTIVITES
 }
 
 .populaires .card-img img {
-  width: 140px;
-  height: 140px;
   border-radius: 1em 0 0 1em;
+  height: 140px;
+  width: 140px;
 }
 
 .populaires .card-content {
@@ -294,16 +301,16 @@ SECTIONS POPULAIRES, HEBERGEMENTS, ACTIVITES
 }
 
 :is(.hebergements, .activites) .card-img img {
-  width: 100%;
   border-radius: 1em 1em 0 0;
+  width: 100%;
 }
 .hebergements .card-img img {
   height: 110px;
 }
 
 .hebergements .card-content {
-  padding: 5px 0.5em;
   flex-grow: 1;
+  padding: 5px 0.5em;
 }
 
 .activites .card {
@@ -315,8 +322,8 @@ SECTIONS POPULAIRES, HEBERGEMENTS, ACTIVITES
 }
 
 .activites .card-content {
-  flex-direction: row;
   align-items: center;
+  flex-direction: row;
   flex-grow: 1;
   padding-left: 1em;
 }
