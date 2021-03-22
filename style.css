@@ -49,7 +49,14 @@ body {
 
 section,
 footer {
-  padding: 2em 5%;
+  padding: 2em 1em;
+}
+
+@media screen and (min-width: 768px) {
+  section,
+  footer {
+    padding: 2em;
+  }
 }
 
 h2 {
@@ -84,11 +91,11 @@ header {
 
 h1 {
   flex-basis: 60%;
-  padding-left: 5%;
+  padding-left: 1rem;
 }
 
 .inscription {
-  padding-right: 5%;
+  padding-right: 1rem;
 }
 
 .inscription a {
@@ -142,7 +149,7 @@ nav {
 
 form {
   display: flex;
-  margin: 1.5em 0;
+  margin: 2em 0;
 }
 
 form > * {
@@ -259,10 +266,13 @@ button {
   font-weight: bold;
 }
 
+@media screen and (min-width: 768px) {
+}
+
 /* 5.1. CARDS GENERAL LAYOUT */
 
 .cards {
-  margin-top: 2em;
+  margin-top: 2rem;
 }
 
 .card {
@@ -323,7 +333,7 @@ button {
 }
 
 .populaires .card-content {
-  padding: 1em 1.5em;
+  padding: 1em 1.25em;
 }
 
 /* 5.3. CARDS HEBERGEMENTS */
