@@ -49,13 +49,13 @@ body {
 
 section,
 footer {
-  padding: 2em 1em;
+  padding: 2rem 1.5rem;
 }
 
 @media screen and (min-width: 768px) {
   section,
   footer {
-    padding: 2em;
+    padding: 2rem;
   }
 }
 
@@ -114,14 +114,14 @@ nav {
 }
 
 .nav-link-item {
-  border-bottom: 0.2em solid var(--tertiary-color);
+  border-bottom: 0.2rem solid var(--tertiary-color);
   display: flex;
   flex-basis: 50%;
 }
 
 .nav-link-item a {
   flex-basis: 100%;
-  padding: 0.75em 0;
+  padding: 0.75rem 0;
   text-align: center;
 }
 
@@ -140,35 +140,50 @@ nav {
 .accroche {
   clear: left;
   display: block;
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: normal;
-  margin-top: 0.6em;
+  margin-top: 0.75rem;
 }
 
 /* 4.1. CHAMP DE RECHERCHE */
 
 form {
-  display: flex;
-  margin: 2em 0;
+  margin: 2rem 0;
 }
 
-form > * {
+.form {
+  display: flex;
+  border-color: var(--tertiary-color);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 1rem;
+  height: 3rem;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.form > * {
   font-size: 1rem;
+}
+
+.form label,
+.form button {
+  display: flex;
+  width: 3rem;
+  align-items: center;
+  justify-content: center;
 }
 
 label {
   background-color: var(--tertiary-color);
   border-radius: 25% 0 0 25%;
-  padding: 0.75em 1em;
+  margin: -1px 0 0 -1px;
+  height: 3rem;
 }
 
 input {
-  border-block: 1px solid var(--tertiary-color);
-  border-inline: 0;
+  border: 0;
   font-weight: bold;
-  margin: 0;
-  outline-color: var(--secondary-color);
-  padding: 0 1em;
 }
 
 ::placeholder {
@@ -180,8 +195,9 @@ button {
   border: 0;
   border-radius: 25%;
   color: #fff;
-  margin-left: -0.5em;
-  padding: 0 1em;
+  padding: 0;
+  margin: -1px -1px 0 0;
+  height: 3rem;
 }
 
 /* 4.2. FILTRES */
@@ -190,36 +206,43 @@ button {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-left: 5px;
 }
 
 .filtres li {
   align-items: center;
   cursor: pointer;
   display: flex;
-  margin-bottom: 0.8em;
-  position: relative;
+  margin-bottom: 0.8rem;
+  border: 2px solid var(--tertiary-color);
+  border-radius: 1.75rem;
+  height: 3rem;
+}
+
+.filtres li:last-of-type {
+  margin-bottom: 0;
 }
 
 .filtres div {
   background-color: var(--secondary-color);
   border-radius: 50%;
-  left: -5px;
-  padding: 0.8em;
-  position: absolute;
-  text-align: center;
-  width: 3em;
+  margin-left: -0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: calc(100% + 4px);
+}
+
+.filtres i {
+  font-size: 1.25rem;
 }
 
 .filtres span {
-  border: 2px solid var(--tertiary-color);
-  border-radius: 1.5em;
   font-weight: bold;
-  padding-block: calc(0.8em - 2px);
-  padding-inline: 3.5em 1em;
+  padding: 0 1rem;
 }
 
-.filtres li:hover span {
+.filtres li:hover {
   background-color: var(--secondary-color);
   border-color: var(--secondary-color);
   color: var(--primary-color);
@@ -233,6 +256,7 @@ button {
   align-items: baseline;
   display: flex;
   font-size: 0.875rem;
+  margin-top: 2rem;
 }
 
 .information div {
@@ -240,13 +264,13 @@ button {
   border: 1px solid var(--tertiary-color);
   border-radius: 50%;
   display: flex;
-  height: 2em;
+  height: 2rem;
   justify-content: center;
-  min-width: 2em;
+  min-width: 2rem;
 }
 
 .information p {
-  margin-left: 0.5em;
+  margin-left: 0.5rem;
 }
 
 /*--------------
@@ -277,8 +301,8 @@ button {
 
 .card {
   background-color: #fff;
-  border-radius: 1em;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   margin-bottom: 1rem;
   padding: 5px;
@@ -294,7 +318,7 @@ button {
 }
 
 :is(.hebergements, .activites) .card-img img {
-  border-radius: 1em 1em 0 0;
+  border-radius: 1rem 1rem 0 0;
   width: 100%;
 }
 
@@ -309,11 +333,13 @@ button {
 }
 
 .card-content p {
-  margin-top: 0.5em;
+  margin-top: 0.5rem;
 }
 
 .card i {
   color: var(--tertiary-color);
+  font-size: 0.75rem;
+  letter-spacing: -3px;
 }
 
 .card .blue {
@@ -327,13 +353,13 @@ button {
 }
 
 .populaires .card-img img {
-  border-radius: 1em 0 0 1em;
+  border-radius: 1rem 0 0 1rem;
   height: 140px;
   width: 140px;
 }
 
 .populaires .card-content {
-  padding: 1em 1.25em;
+  padding: 1rem 1.25rem;
 }
 
 /* 5.3. CARDS HEBERGEMENTS */
@@ -344,7 +370,7 @@ button {
 
 .hebergements .card-content {
   flex-grow: 1;
-  padding: 5px 0.5em;
+  padding: 5px 0.5rem;
 }
 
 /* 5.4. CARDS ACTIVITES */
@@ -361,7 +387,7 @@ button {
   align-items: center;
   flex-direction: row;
   flex-grow: 1;
-  padding-left: 1em;
+  padding-left: 1rem;
 }
 
 /*--------------
@@ -374,7 +400,7 @@ footer {
 }
 
 footer div {
-  padding-top: 2em;
+  padding-top: 2rem;
 }
 
 footer h3 {
@@ -382,5 +408,5 @@ footer h3 {
 }
 
 footer li {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.5rem;
 }
