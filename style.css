@@ -87,10 +87,12 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding-top: 2rem;
 }
 
 h1 {
   padding-left: 1rem;
+  margin: 0;
 }
 
 .inscription {
@@ -100,6 +102,28 @@ h1 {
 .inscription a {
   color: var(--primary-color);
   font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    flex-wrap: nowrap;
+    padding: 0 2rem;
+    align-items: stretch;
+  }
+
+  h1 {
+    order: 1;
+    flex: 2;
+    padding: 2rem 0 0 0;
+  }
+
+  .inscription {
+    order: 3;
+    padding-right: 0;
+    padding: 2rem 0 0;
+    align-items: center;
+    display: flex;
+  }
 }
 
 /* 3.1 NAVIGATION */
@@ -131,6 +155,21 @@ nav {
   color: var(--primary-color);
 }
 
+@media screen and (min-width: 768px) {
+  nav {
+    width: auto;
+    order: 2;
+    flex: 1;
+    height: 100%;
+  }
+
+  .nav-link-item {
+    border-bottom: 0;
+    border-top: 0.2rem solid transparent;
+    padding-top: calc(2rem + 2px);
+  }
+}
+
 /*--------------------------------
   4. ACCROCHE, RECHERCHE & FILTRES
 ----------------------------------*/
@@ -158,6 +197,7 @@ form {
   height: 3rem;
   width: 100%;
   justify-content: space-between;
+  max-width: 420px;
 }
 
 .form > * {
@@ -174,7 +214,7 @@ form {
 
 label {
   background-color: var(--tertiary-color);
-  border-radius: 25% 0 0 25%;
+  border-radius: 1rem 0 0 1rem;
   margin: -1px 0 0 -1px;
   height: 3rem;
 }
@@ -191,11 +231,31 @@ input {
 button {
   background-color: var(--primary-color);
   border: 0;
-  border-radius: 25%;
+  border-radius: 1rem;
   color: #fff;
   padding: 0;
   margin: -1px -1px 0 0;
   height: 3rem;
+}
+
+button span {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .form button {
+    width: auto;
+    border-radius: 0 1rem 1rem 0;
+  }
+
+  .form button i {
+    display: none;
+  }
+
+  button span {
+    display: inline;
+    padding: 0 1rem;
+  }
 }
 
 /* 4.2. FILTRES */
@@ -286,9 +346,6 @@ button {
 
 .more {
   font-weight: bold;
-}
-
-@media screen and (min-width: 768px) {
 }
 
 /* 5.1. CARDS GENERAL LAYOUT */
