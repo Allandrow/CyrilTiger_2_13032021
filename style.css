@@ -323,15 +323,12 @@ button {
 .card-content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-}
-
-.card-content :is(p, i) {
+  justify-content: space-around;
   font-size: 0.875rem;
 }
 
 .card-content p {
-  margin-top: 0.5rem;
+  margin-top: 0.25rem;
 }
 
 .card i {
@@ -347,20 +344,24 @@ button {
 /* 5.2. CARDS POPULAIRES */
 
 .populaires .card {
-  height: 150px;
+  height: 140px;
 }
 
 .populaires .card-img img {
   border-radius: 1rem 0 0 1rem;
-  height: 140px;
-  width: 140px;
+  height: 130px;
+  width: 130px;
 }
 
 .populaires .card-content {
-  padding: 1rem 1.25rem;
+  padding: 0 1.25rem;
 }
 
 /* 5.3. CARDS HEBERGEMENTS */
+
+.hebergements .cards {
+  margin-bottom: 2rem;
+}
 
 .hebergements .card-img img {
   height: 110px;
@@ -385,7 +386,8 @@ button {
   align-items: center;
   flex-direction: row;
   flex-grow: 1;
-  padding-left: 1rem;
+  justify-content: flex-start;
+  padding-left: 1.125rem;
 }
 
 /*--------------
