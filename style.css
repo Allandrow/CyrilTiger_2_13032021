@@ -90,7 +90,6 @@ header {
 }
 
 h1 {
-  flex-basis: 60%;
   padding-left: 1rem;
 }
 
@@ -106,7 +105,7 @@ h1 {
 /* 3.1 NAVIGATION */
 
 nav {
-  flex-basis: 100%;
+  width: 100%;
 }
 
 .header-nav {
@@ -116,13 +115,12 @@ nav {
 .nav-link-item {
   border-bottom: 0.2rem solid var(--tertiary-color);
   display: flex;
-  flex-basis: 50%;
+  flex: 1;
+  justify-content: center;
 }
 
 .nav-link-item a {
-  flex-basis: 100%;
   padding: 0.75rem 0;
-  text-align: center;
 }
 
 .nav-link-item:hover {
