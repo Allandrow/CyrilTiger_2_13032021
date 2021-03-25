@@ -54,6 +54,10 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
+  .container {
+    padding: 0 2rem;
+  }
+
   section,
   aside,
   footer {
@@ -61,7 +65,8 @@ footer {
   }
 }
 
-h2 {
+h2,
+h3 {
   margin: 0;
 }
 
@@ -92,9 +97,8 @@ header {
   padding-top: 2rem;
 }
 
-h1 {
+.logo {
   padding-left: 1rem;
-  margin: 0;
 }
 
 .inscription {
@@ -109,44 +113,48 @@ h1 {
 @media screen and (min-width: 768px) {
   header {
     flex-wrap: nowrap;
-    padding: 0 2rem;
+    padding: 0;
+    justify-content: flex-end;
     align-items: stretch;
   }
 
-  h1 {
+  .logo {
     order: 1;
-    flex: 3;
-    padding: 2rem 0 0 0;
+    margin-right: auto;
+    padding: 1rem 0 0 0;
+  }
+
+  .logo a {
+    display: block;
   }
 
   .inscription {
     order: 3;
-    padding-right: 0;
-    padding: 2rem 0 0;
-    align-items: center;
-    display: flex;
+    padding: 2.125rem 0 0;
   }
 }
 
 /* 3.1 NAVIGATION */
 
 nav {
-  width: 100%;
+  flex: 100%;
 }
 
 .header-nav {
   display: flex;
+  margin-top: 1rem;
 }
 
 .nav-link-item {
   border-bottom: 0.2rem solid var(--tertiary-color);
   display: flex;
   flex: 1;
-  justify-content: center;
 }
 
 .nav-link-item a {
   padding: 0.75rem 0;
+  flex: 100%;
+  text-align: center;
 }
 
 .nav-link-item:hover {
@@ -159,16 +167,24 @@ nav {
 
 @media screen and (min-width: 768px) {
   nav {
-    width: auto;
     order: 2;
-    flex: 2;
-    height: 100%;
+    flex: 0;
+    padding: 0 1rem;
+  }
+
+  .header-nav {
+    margin-top: 0;
   }
 
   .nav-link-item {
     border-bottom: 0;
+    flex: 0;
+    padding: 2rem 2rem 0;
     border-top: 0.2rem solid transparent;
-    padding-top: calc(2rem + 2px);
+  }
+
+  .nav-link-item a {
+    padding: 0;
   }
 }
 
@@ -262,13 +278,14 @@ button span {
 
 /* 4.2. FILTRES */
 
-.filtres {
+.filtres-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-top: 1rem;
 }
 
-.filtres li {
+.filtres-list li {
   align-items: center;
   cursor: pointer;
   display: flex;
@@ -278,11 +295,11 @@ button span {
   height: 3rem;
 }
 
-.filtres li:last-of-type {
+.filtres-list li:last-of-type {
   margin-bottom: 0;
 }
 
-.filtres div {
+.filtres-list div {
   background-color: var(--secondary-color);
   border-radius: 50%;
   margin-left: -0.25rem;
@@ -293,22 +310,22 @@ button span {
   height: calc(100% + 4px);
 }
 
-.filtres i {
+.filtres-list i {
   font-size: 1.25rem;
 }
 
-.filtres span {
+.filtres-list span {
   font-weight: bold;
   padding: 0 1rem;
 }
 
-.filtres li:hover {
+.filtres-list li:hover {
   background-color: var(--secondary-color);
   border-color: var(--secondary-color);
   color: var(--primary-color);
 }
 
-:is(.filtres, .information) i {
+:is(.filtres-list, .information) i {
   color: var(--primary-color);
 }
 
@@ -333,6 +350,22 @@ button span {
   margin-left: 0.5rem;
 }
 
+@media screen and (min-width: 1400px) {
+  .filtres {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+  }
+
+  .filtres-list {
+    margin: 0 0 0 2rem;
+  }
+
+  .filtres-list li {
+    margin-right: 1rem;
+  }
+}
+
 /*--------------
   5. MAIN
 ----------------*/
@@ -353,6 +386,37 @@ button span {
 
 .more {
   font-weight: bold;
+}
+
+@media screen and (min-width: 1400px) {
+  main {
+    padding: 0 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .populaires {
+    order: 2;
+    max-width: 420px;
+    flex: auto;
+  }
+
+  .hebergements {
+    order: 1;
+    flex: 1;
+    margin-right: 2rem;
+    background-color: var(--tertiary-color);
+  }
+
+  .populaires,
+  .hebergements {
+    border-radius: 1rem;
+  }
+
+  .activites {
+    order: 3;
+  }
 }
 
 /* 5.1. CARDS GENERAL LAYOUT */
@@ -389,6 +453,7 @@ button span {
   flex-direction: column;
   justify-content: space-around;
   font-size: 0.875rem;
+  flex: 1;
 }
 
 .card-content p {
@@ -405,7 +470,7 @@ button span {
   color: var(--primary-color);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1399px) {
   .cards {
     display: flex;
     flex-wrap: wrap;
@@ -444,8 +509,7 @@ button span {
 }
 
 .hebergements .card-content {
-  flex-grow: 1;
-  padding: 5px 0.5rem;
+  padding: 0 0.5rem;
 }
 
 /* 5.4. CARDS ACTIVITES */
@@ -461,7 +525,6 @@ button span {
 .activites .card-content {
   align-items: center;
   flex-direction: row;
-  flex-grow: 1;
   justify-content: flex-start;
   padding-left: 1.125rem;
 }
@@ -481,6 +544,10 @@ footer div {
 
 footer h3 {
   margin-top: 0;
+}
+
+footer ul {
+  margin-top: 1rem;
 }
 
 footer li {
