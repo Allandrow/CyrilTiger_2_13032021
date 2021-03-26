@@ -59,9 +59,8 @@ footer {
   }
 
   section,
-  aside,
-  footer {
-    padding: 2rem;
+  aside {
+    padding: 2rem 0;
   }
 }
 
@@ -103,7 +102,6 @@ header {
 
 .inscription {
   display: flex;
-  padding-right: 1rem;
 }
 
 .inscription a {
@@ -111,6 +109,7 @@ header {
   color: var(--primary-color);
   display: flex;
   font-weight: bold;
+  padding-right: 1rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -125,8 +124,16 @@ header {
     margin-right: auto;
   }
 
+  .logo a {
+    padding: 1rem 0;
+  }
+
   .inscription {
     order: 1;
+  }
+
+  .inscription a {
+    padding-right: 0;
   }
 }
 
@@ -215,13 +222,13 @@ form {
 }
 
 .form {
-  display: flex;
   border-color: var(--tertiary-color);
+  border-radius: 1rem;
   border-style: solid;
   border-width: 1px;
-  border-radius: 1rem;
-  height: 3rem;
+  display: flex;
   flex: 1;
+  height: 3rem;
   justify-content: space-between;
   max-width: 420px;
 }
@@ -232,10 +239,10 @@ form {
 
 .form label,
 .form button {
-  display: flex;
-  width: 3rem;
   align-items: center;
+  display: flex;
   justify-content: center;
+  min-width: 3rem;
 }
 
 label {
@@ -247,6 +254,7 @@ label {
 input {
   border: 0;
   font-weight: bold;
+  padding-left: 1rem;
 }
 
 ::placeholder {
@@ -258,9 +266,8 @@ button {
   border: 0;
   border-radius: 1rem;
   color: #fff;
-  padding: 0;
   margin: -1px -1px 0 0;
-  height: 3rem;
+  padding: 0;
 }
 
 button span {
@@ -269,7 +276,6 @@ button span {
 
 @media screen and (min-width: 768px) {
   .form button {
-    width: auto;
     border-radius: 0 1rem 1rem 0;
   }
 
@@ -285,54 +291,69 @@ button span {
 
 /* 4.2. FILTRES */
 
+.filtres {
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filtres h3 {
+  margin: 0 2rem 0.5rem 0;
+}
+
 .filtres-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 1rem;
 }
 
-.filtres-list li {
+.filtres-list-item {
   align-items: center;
-  cursor: pointer;
-  display: flex;
-  margin-bottom: 0.8rem;
   border: 2px solid var(--tertiary-color);
   border-radius: 1.75rem;
+  cursor: pointer;
+  display: flex;
   height: 3rem;
+  margin-top: 0.75rem;
 }
 
-.filtres-list li:last-of-type {
-  margin-bottom: 0;
+@media screen and (min-width: 768px) {
+  .filtres-list-item {
+    margin-right: 1.25rem;
+  }
+
+  .filtres-list-item:last-of-type {
+    margin-right: 0;
+  }
 }
 
-.filtres-list div {
+.filtres-list-item div {
+  align-items: center;
   background-color: var(--secondary-color);
   border-radius: 50%;
-  margin-left: -0.25rem;
   display: flex;
-  align-items: center;
+  height: calc(100% + 0.25rem);
   justify-content: center;
+  margin-left: -0.125rem;
   width: 3rem;
-  height: calc(100% + 4px);
 }
 
-.filtres-list i {
+.filtres-list-item i {
   font-size: 1.25rem;
 }
 
-.filtres-list span {
+.filtres-list-item span {
   font-weight: bold;
   padding: 0 1rem;
 }
 
-.filtres-list li:hover {
+.filtres-list-item:hover {
   background-color: var(--secondary-color);
   border-color: var(--secondary-color);
   color: var(--primary-color);
 }
 
-:is(.filtres-list, .information) i {
+:is(.filtres-list-item, .information) i {
   color: var(--primary-color);
 }
 
@@ -355,22 +376,6 @@ button span {
 
 .information p {
   margin-left: 0.5rem;
-}
-
-@media screen and (min-width: 1400px) {
-  .filtres {
-    display: flex;
-    justify-content: flex-start;
-    align-items: baseline;
-  }
-
-  .filtres-list {
-    margin: 0 0 0 2rem;
-  }
-
-  .filtres-list li {
-    margin-right: 1rem;
-  }
 }
 
 /*--------------
@@ -477,7 +482,7 @@ button span {
   color: var(--primary-color);
 }
 
-@media screen and (min-width: 768px) and (max-width: 1399px) {
+@media screen and (min-width: 768px) {
   .cards {
     display: flex;
     flex-wrap: wrap;
