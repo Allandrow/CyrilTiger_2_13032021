@@ -202,7 +202,6 @@ nav {
 ----------------------------------*/
 
 h2 span {
-  clear: left;
   display: block;
   font-size: 1rem;
   font-weight: normal;
@@ -222,7 +221,7 @@ form {
   border-width: 1px;
   border-radius: 1rem;
   height: 3rem;
-  width: 100%;
+  flex: 1;
   justify-content: space-between;
   max-width: 420px;
 }
@@ -243,7 +242,6 @@ label {
   background-color: var(--tertiary-color);
   border-radius: 1rem 0 0 1rem;
   margin: -1px 0 0 -1px;
-  height: 3rem;
 }
 
 input {
