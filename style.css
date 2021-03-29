@@ -400,41 +400,14 @@ button span {
   font-weight: bold;
 }
 
-@media screen and (min-width: 1400px) {
-  main {
-    padding: 0 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .populaires {
-    order: 2;
-    max-width: 420px;
-    flex: auto;
-  }
-
-  .hebergements {
-    order: 1;
-    flex: 1;
-    margin-right: 2rem;
-    background-color: var(--tertiary-color);
-  }
-
-  .populaires,
-  .hebergements {
-    border-radius: 1rem;
-  }
-
-  .activites {
-    order: 3;
-  }
-}
-
-/* 5.1. CARDS GENERAL LAYOUT */
+/* 5.1. CARDS LAYOUT */
 
 .cards {
   margin-top: 2rem;
+}
+
+.hebergements .cards {
+  margin-bottom: 2rem;
 }
 
 .card {
@@ -444,20 +417,42 @@ button span {
   display: flex;
   margin-bottom: 1rem;
   padding: 5px;
+  flex-direction: column;
+}
+
+.populaires .card {
+  height: 140px;
+  flex-direction: row;
 }
 
 :is(.hebergements, .activites) .card {
-  flex-direction: column;
   height: 200px;
+}
+
+.populaires .card-img {
+  max-width: 40%;
+}
+
+.hebergements .card-img {
+  max-height: 60%;
+}
+
+.activites .card-img {
+  max-height: calc(100% - 3rem);
 }
 
 .card-img img {
   object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.populaires .card-img img {
+  border-radius: 1rem 0 0 1rem;
 }
 
 :is(.hebergements, .activites) .card-img img {
   border-radius: 1rem 1rem 0 0;
-  width: 100%;
 }
 
 .card-content {
@@ -468,8 +463,25 @@ button span {
   flex: 1;
 }
 
-.card-content p {
-  margin-top: 0.25rem;
+.populaires .card-content {
+  padding: 0 1.25rem;
+}
+
+.hebergements .card-content {
+  padding: 0 1rem;
+}
+
+.card strong {
+  font-size: 1rem;
+}
+
+.activites .card-content {
+  height: 3rem;
+  padding-left: 1.125rem;
+}
+
+.populaires .card-content p {
+  margin-top: 0.5rem;
 }
 
 .card i {
@@ -480,65 +492,6 @@ button span {
 
 .card .blue {
   color: var(--primary-color);
-}
-
-@media screen and (min-width: 768px) {
-  .cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .card {
-    max-width: calc(50% - 1rem);
-  }
-}
-
-/* 5.2. CARDS POPULAIRES */
-
-.populaires .card {
-  height: 140px;
-}
-
-.populaires .card-img img {
-  border-radius: 1rem 0 0 1rem;
-  height: 130px;
-  width: 130px;
-}
-
-.populaires .card-content {
-  padding: 0 1.25rem;
-}
-
-/* 5.3. CARDS HEBERGEMENTS */
-
-.hebergements .cards {
-  margin-bottom: 2rem;
-}
-
-.hebergements .card-img img {
-  height: 110px;
-}
-
-.hebergements .card-content {
-  padding: 0 0.5rem;
-}
-
-/* 5.4. CARDS ACTIVITES */
-
-.activites .card {
-  padding: 0;
-}
-
-.activites .card-img img {
-  height: 150px;
-}
-
-.activites .card-content {
-  align-items: center;
-  flex-direction: row;
-  justify-content: flex-start;
-  padding-left: 1.125rem;
 }
 
 /*--------------
