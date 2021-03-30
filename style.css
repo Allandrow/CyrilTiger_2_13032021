@@ -9,10 +9,7 @@
     4.1. CHAMP DE RECHERCHE
     4.2. FILTRES
   5. MAIN
-    5.1. CARDS GENERAL LAYOUT
-    5.2. CARDS POPULAIRES
-    5.3. CARDS HEBERGEMENTS
-    5.4. CARDS ACTIVITES
+    5.1. CARDS LAYOUT
   6. FOOTER
 */
 
@@ -38,7 +35,8 @@
 
 body {
   font-family: 'Raleway', sans-serif;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 1440px;
 }
 
 .page {
@@ -400,10 +398,38 @@ button span {
   font-weight: bold;
 }
 
+@media screen and (min-width: 768px) {
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .populaires {
+    max-width: 420px;
+    flex: 1;
+    margin-left: 2rem;
+  }
+
+  .hebergements {
+    order: -1;
+    background-color: var(--tertiary-color);
+    flex: 1;
+  }
+
+  :is(.populaires, .hebergements) {
+    padding: 2rem;
+    border-radius: 1rem;
+  }
+}
+
 /* 5.1. CARDS LAYOUT */
 
 .cards {
   margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .hebergements .cards {
@@ -415,7 +441,6 @@ button span {
   border-radius: 1rem;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.1);
   display: flex;
-  margin-bottom: 1rem;
   padding: 5px;
   flex-direction: column;
 }
@@ -492,6 +517,23 @@ button span {
 
 .card .blue {
   color: var(--primary-color);
+}
+
+@media screen and (min-width: 768px) {
+  .cards {
+    gap: 2rem;
+  }
+
+  .hebergements .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .hebergements .card {
+    min-width: 250px;
+    flex: 1 25%;
+  }
 }
 
 /*--------------
