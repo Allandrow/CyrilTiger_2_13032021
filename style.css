@@ -413,6 +413,7 @@ button span {
     max-width: 420px;
     flex: 1;
     margin-left: 2rem;
+    max-height: 610px;
   }
 
   .hebergements {
