@@ -591,6 +591,10 @@ footer {
   padding-top: 0;
 }
 
+footer .container {
+  padding-top: 0;
+}
+
 footer div {
   padding-top: 2rem;
 }
@@ -610,6 +614,9 @@ footer li {
 @media screen and (min-width: 768px) {
   footer .container {
     display: flex;
-    justify-content: space-between;
+  }
+
+  footer div {
+    flex: 1;
   }
 }
