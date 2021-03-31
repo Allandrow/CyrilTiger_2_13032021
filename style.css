@@ -461,6 +461,10 @@ button span {
   flex-direction: row;
 }
 
+.activites .card {
+  padding: 0;
+}
+
 :is(.hebergements, .activites) .card {
   height: 200px;
 }
