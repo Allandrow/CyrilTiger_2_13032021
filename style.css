@@ -1,18 +1,3 @@
-/*
-  SOMMAIRE
-
-  1. VARIABLES
-  2. RESET & GENERAL LAYOUT
-  3. HEADER
-    3.1. NAVIGATION
-  4. ACCROCHE, RECHERCHE & FILTRES
-    4.1. CHAMP DE RECHERCHE
-    4.2. FILTRES
-  5. MAIN
-    5.1. CARDS LAYOUT
-  6. FOOTER
-*/
-
 /*--------------
   1. VARIABLES
 ----------------*/
@@ -21,6 +6,7 @@
   --primary-color: #0065fc;
   --secondary-color: #deebff;
   --tertiary-color: #f2f2f2;
+  --font: 'Raleway', sans-serif;
 }
 
 /*-------------------------
@@ -34,7 +20,7 @@
 }
 
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font);
   margin: 0;
 }
 
@@ -263,10 +249,12 @@ input {
   padding-left: 1rem;
   min-width: 0;
   flex: 1;
+  font-family: var(--font);
 }
 
 ::placeholder {
   color: #000;
+  opacity: 1;
 }
 
 button {
