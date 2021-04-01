@@ -48,7 +48,7 @@ footer {
 
   section,
   aside {
-    padding: 2rem 0;
+    padding: 3rem 2rem;
   }
 }
 
@@ -193,7 +193,7 @@ nav {
   .nav-link-item a {
     align-items: center;
     display: flex;
-    padding: 0 1rem;
+    padding: 0 1.5rem;
   }
 }
 
@@ -407,7 +407,7 @@ button span {
     max-width: 420px;
     flex: 1;
     margin-left: 2rem;
-    max-height: 610px;
+    height: 100%;
   }
 
   .hebergements {
@@ -417,8 +417,11 @@ button span {
   }
 
   :is(.populaires, .hebergements) {
-    padding: 2rem;
     border-radius: 1rem;
+  }
+
+  .activites {
+    padding: 4rem 0;
   }
 }
 
@@ -621,5 +624,6 @@ footer li {
 
   footer div {
     flex: 1;
+    padding-top: 3rem;
   }
 }
