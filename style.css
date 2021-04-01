@@ -1,5 +1,5 @@
 /*--------------
-  1. VARIABLES
+  VARIABLES
 ----------------*/
 
 :root {
@@ -10,7 +10,7 @@
 }
 
 /*-------------------------
-  2. RESET & GENERAL LAYOUT
+  RESET & GENERAL LAYOUT
 ---------------------------*/
 
 *,
@@ -32,7 +32,6 @@ body {
 
 .container {
   margin: 0 auto;
-  max-width: 1440px;
 }
 
 section,
@@ -78,7 +77,7 @@ p {
 }
 
 /*--------------
-  3. HEADER
+  HEADER
 ----------------*/
 
 header {
@@ -130,7 +129,7 @@ header {
   }
 }
 
-/* 3.1 NAVIGATION */
+/* NAVIGATION */
 
 nav {
   display: flex;
@@ -198,7 +197,7 @@ nav {
 }
 
 /*--------------------------------
-  4. H2, RECHERCHE & FILTRES
+  H2, RECHERCHE & FILTRES
 ----------------------------------*/
 
 h2 span {
@@ -208,7 +207,7 @@ h2 span {
   margin-top: 0.75rem;
 }
 
-/* 4.1. CHAMP DE RECHERCHE */
+/* CHAMP DE RECHERCHE */
 
 form {
   margin: 2rem 0;
@@ -285,7 +284,7 @@ button span {
   }
 }
 
-/* 4.2. FILTRES */
+/* FILTRES */
 
 .filtres {
   align-items: baseline;
@@ -375,7 +374,7 @@ button span {
 }
 
 /*--------------
-  5. MAIN
+  MAIN
 ----------------*/
 
 .populaires {
@@ -425,7 +424,7 @@ button span {
   }
 }
 
-/* 5.1. CARDS LAYOUT */
+/* CARDS LAYOUT */
 
 .cards {
   margin-top: 2rem;
@@ -589,7 +588,7 @@ button span {
 }
 
 /*--------------
-  6. FOOTER
+  FOOTER
 ----------------*/
 
 footer {
