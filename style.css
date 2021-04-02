@@ -62,8 +62,9 @@ a {
   text-decoration: none;
 }
 
-:is(.inscription, footer) a:hover,
-.more:hover {
+.inscription a:hover,
+.more:hover,
+footer a:hover {
   text-decoration: underline;
 }
 
@@ -349,7 +350,8 @@ button span {
   color: var(--primary-color);
 }
 
-:is(.filtres-list-item, .information) i {
+.filtres-list-item i,
+.information i {
   color: var(--primary-color);
 }
 
@@ -408,15 +410,13 @@ button span {
     flex: 1;
     margin-left: 2rem;
     height: 100%;
+    border-radius: 1rem;
   }
 
   .hebergements {
     order: -1;
     background-color: var(--tertiary-color);
     flex: 1;
-  }
-
-  :is(.populaires, .hebergements) {
     border-radius: 1rem;
   }
 
@@ -467,7 +467,8 @@ button span {
   padding: 0;
 }
 
-:is(.hebergements, .activites) .card {
+.hebergements .card,
+.activites .card {
   height: 200px;
 }
 
@@ -493,7 +494,8 @@ button span {
   border-radius: 1rem 0 0 1rem;
 }
 
-:is(.hebergements, .activites) .card-img img {
+.hebergements .card-img img,
+.activites .card-img img {
   border-radius: 1rem 1rem 0 0;
 }
 
