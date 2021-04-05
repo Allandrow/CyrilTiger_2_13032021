@@ -50,6 +50,10 @@ footer {
   aside {
     padding: 3rem 2rem;
   }
+
+  .search-filters {
+    padding: 3rem 0;
+  }
 }
 
 h2,
@@ -194,7 +198,7 @@ nav {
   .nav-link-item a {
     align-items: center;
     display: flex;
-    padding: 0 1.5rem;
+    padding: 0 2rem;
   }
 }
 
