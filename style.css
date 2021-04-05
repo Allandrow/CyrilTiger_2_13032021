@@ -543,6 +543,10 @@ button span {
     gap: 2rem;
   }
 
+  .activites .cards {
+    gap: 2.5rem;
+  }
+
   .hebergements .cards {
     display: flex;
     flex-wrap: wrap;
@@ -557,12 +561,13 @@ button span {
   .card-group {
     height: 450px;
     flex-wrap: wrap;
-    flex: 1 550px;
+    flex: 1;
+    min-width: 500px;
     gap: 2.5rem;
   }
 
   .activites .card {
-    max-width: calc(50% - 2.5rem);
+    max-width: calc(50% - 2.5rem / 2);
   }
 
   .activites .card {
