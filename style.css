@@ -521,6 +521,14 @@ button span {
 
 .card strong {
   font-size: 1rem;
+  display: block;
+  max-height: 2.5rem;
+  overflow: hidden;
+}
+
+.card p {
+  max-height: 2rem;
+  overflow: hidden;
 }
 
 .activites .card-content {
