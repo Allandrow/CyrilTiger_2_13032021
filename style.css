@@ -481,7 +481,7 @@ button span {
 }
 
 .hebergements .card-img {
-  max-height: 60%;
+  height: 115px;
 }
 
 .activites .card-img {
