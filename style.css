@@ -491,7 +491,7 @@ button span {
 }
 
 .activites .card-img {
-  max-height: calc(100% - 3rem);
+  height: calc(100% - 3rem);
 }
 
 .card-img img {
