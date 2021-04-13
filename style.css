@@ -425,6 +425,7 @@ button span {
 
   .activites {
     padding: 4rem 0;
+    width: 100%;
   }
 }
 
@@ -439,6 +440,7 @@ button span {
 .card-group {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .hebergements .cards {
@@ -454,6 +456,7 @@ button span {
   flex-direction: column;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   margin-bottom: 0.75rem;
+  width: 100%;
 }
 
 .card:hover {
