@@ -114,7 +114,6 @@ header {
   header {
     align-items: stretch;
     flex-wrap: nowrap;
-    justify-content: flex-end;
     padding: 0;
   }
 
