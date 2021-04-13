@@ -86,7 +86,7 @@ p {
   HEADER
 ----------------*/
 
-header {
+nav {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
@@ -111,7 +111,7 @@ header {
 }
 
 @media screen and (min-width: 768px) {
-  header {
+  nav {
     align-items: stretch;
     flex-wrap: nowrap;
     padding: 0;
@@ -136,7 +136,7 @@ header {
 
 /* NAVIGATION */
 
-nav {
+.nav {
   display: flex;
   flex: 100%;
 }
@@ -178,7 +178,7 @@ nav {
 }
 
 @media screen and (min-width: 768px) {
-  nav {
+  .nav {
     flex: 0;
     padding: 0 1rem;
   }
