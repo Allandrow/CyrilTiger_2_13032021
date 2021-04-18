@@ -454,7 +454,6 @@ button span {
   display: flex;
   padding: 5px;
   flex-direction: column;
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   margin-bottom: 0.75rem;
   width: 100%;
 }
